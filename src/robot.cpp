@@ -25,9 +25,9 @@ void update_robot(){
 
     intakeF.stop();
     intakeB.stop();
-    
-    Controller.ButtonR1.pressed(toggle_descore);
-    Controller.ButtonR2.pressed(toggle_matchload);
+
+    Controller.ButtonL1.pressed(toggle_descore);
+    Controller.ButtonX.pressed(toggle_matchload);
 
     if (Controller.ButtonR1.pressing()){
         intakeF.spin(forward);
