@@ -20,6 +20,12 @@ void toggle_descore(){
 
 void update_robot(){
 
+    intakeF.setVelocity(600, rpm);
+    intakeB.setVelocity(600, rpm);
+
+    intakeF.stop();
+    intakeB.stop();
+    
     Controller.ButtonR1.pressed(toggle_descore);
     Controller.ButtonR2.pressed(toggle_matchload);
 
