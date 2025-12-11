@@ -10,15 +10,15 @@ brain  Brain;
 controller Controller(primary);
 
 //The motor constructor takes motors as (port, ratio, reversed), so for example
-motor leftF = motor(PORT6, ratio6_1, false);
-motor leftM = motor(PORT5, ratio6_1, false);
-motor leftB = motor(PORT8, ratio6_1, false);
+motor leftF = motor(PORT6, ratio6_1, true);
+motor leftM = motor(PORT5, ratio6_1, true);
+motor leftB = motor(PORT8, ratio6_1, true);
 
-motor rightF = motor(PORT7, ratio6_1, true);
-motor rightM = motor(PORT9, ratio6_1, true);
-motor rightB = motor(PORT20, ratio6_1, true);
+motor rightF = motor(PORT7, ratio6_1, false);
+motor rightM = motor(PORT9, ratio6_1, false);
+motor rightB = motor(PORT20, ratio6_1, false);
 
-motor intakeF = motor(PORT19, ratio6_1, true);
+motor intakeF = motor(PORT19, ratio6_1, false);
 motor intakeB = motor(PORT3, ratio6_1, true);
 
 digital_out descore = digital_out(Brain.ThreeWirePort.F);
