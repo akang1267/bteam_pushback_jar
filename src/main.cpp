@@ -44,10 +44,10 @@ ZERO_TRACKER_NO_ODOM,
 //You will input whatever motor names you chose when you configured your robot using the sidebar configurer, they don't have to be "Motor1" and "Motor2".
 
 //Left Motors:
-motor_group(),
+motor_group(leftF, leftM, leftB),
 
 //Right Motors:
-motor_group(),
+motor_group(rightF, rightM, rightB),
 
 //Specify the PORT NUMBER of your inertial sensor, in PORT format (i.e. "PORT1", not simply "1"):
 PORT1,
@@ -226,7 +226,7 @@ void usercontrol(void) {
     //Replace this line with chassis.control_tank(); for tank drive 
     //or chassis.control_holonomic(); for holo drive.
     chassis.control_arcade();
-
+    update_robot();
     wait(20, msec); // Sleep the task for a short amount of time to
                     // prevent wasted resources.
   }
